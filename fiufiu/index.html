@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Button</title>
+</head>
+<body>
+    <div style="position: fixed; bottom: 0; right: 0; font-size: 20px; color: #666; padding: 5px;">
+        By Adam/UNLIMITIIDD
+    </div>
+    
+
+<div style="text-align: center; margin-top: 50px;">
+    <button id="surpriseButton" style="font-size: 20px; padding: 10px 20px;">Click it for a surprise</button>
+</div>
+
+<div id="surpriseContent" style="display: none; text-align: center; margin-top: 20px;">
+    <img id="surpriseImage" style="max-width: 100%; max-height: 80vh;" src="" alt="Surprise Image">
+    <audio id="surpriseAudio" style="display: none;" controls></audio>
+</div>
+
+<script>
+    var surpriseButton = document.getElementById('surpriseButton');
+    var surpriseContent = document.getElementById('surpriseContent');
+    var surpriseImage = document.getElementById('surpriseImage');
+    var surpriseAudio = document.getElementById('surpriseAudio');
+
+    surpriseButton.addEventListener('click', function() {
+        // Replace 'path/to/your/image.jpg' with the actual path to your image file
+        surpriseImage.src = 'meme.png';
+        
+        // Replace 'path/to/your/audio.mp3' with the actual path to your audio file
+        surpriseAudio.src = 'josh.mp3';
+
+        surpriseContent.style.display = 'block';
+        
+        // Autoplay the audio
+        surpriseAudio.play();
+    });
+</script>
+
+</body>
+</html>
